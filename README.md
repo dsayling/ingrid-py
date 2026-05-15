@@ -1,6 +1,6 @@
 # ingrid-py
 
-Python bindings for the [ingrid](https://github.com/dsayling/ingrid) crossword-filling library, built with [PyO3](https://pyo3.rs) and [Maturin](https://maturin.rs).
+Python bindings for the [ingrid](https://github.com/rf-/ingrid_core) crossword-filling library, built with [PyO3](https://pyo3.rs) and [Maturin](https://maturin.rs).
 
 ## Installation
 

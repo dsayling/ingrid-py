@@ -1,6 +1,6 @@
 [package]
 name = "ingrid-py"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 [lib]
@@ -9,9 +9,9 @@ crate-type = ["cdylib"]
 
 [dependencies]
 pyo3 = { version = "0.23", features = ["extension-module"] }
-ingrid_core = { git = "https://github.com/dsayling/ingrid_core" }
+ingrid_core = { git = "https://github.com/rf-/ingrid_core" }
 
 # For local development against a checked-out sibling, add to your own
 # ~/.cargo/config.toml or a local Cargo.toml [patch] section:
-#   [patch."https://github.com/dsayling/ingrid_core"]
+#   [patch."https://github.com/rf-/ingrid_core"]
 #   ingrid_core = { path = "../ingrid_core" }
