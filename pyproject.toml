@@ -1,0 +1,23 @@
+[build-system]
+requires = ["maturin>=1.13,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "ingrid-py"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+
+[tool.maturin]
+# Python source lives in python/, the .so goes inside the ingrid_py package.
+python-source = "python"
+module-name = "ingrid_py.ingrid_py"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
