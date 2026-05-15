@@ -3,14 +3,11 @@
 from pathlib import Path
 
 import pytest
-
 from ingrid_py import GridConfig, WordList
 
 # Path to the bundled Spread The Word List dictionary shipped with ingrid_core.
 # Format: `word;score` per line (315K entries).
-STWL_PATH = (
-    Path(__file__).parents[2] / "ingrid_core" / "resources" / "spreadthewordlist.dict"
-)
+STWL_PATH = Path(__file__).parents[2] / "ingrid_core" / "resources" / "spreadthewordlist.dict"
 
 # A comprehensive set of common 3-letter English words at high score so that
 # the fill engine has enough options to find a valid 3×3 fill quickly.
@@ -374,7 +371,5 @@ def stwl_word_list() -> WordList:
     """Load the bundled Spread The Word List dictionary (315K words, session-scoped)."""
     text = STWL_PATH.read_text(encoding="utf-8")
     # STWL uses `word;score` — convert to the tab-separated format from_text expects.
-    tsv = "\n".join(
-        line.replace(";", "\t", 1) for line in text.splitlines() if ";" in line
-    )
+    tsv = "\n".join(line.replace(";", "\t", 1) for line in text.splitlines() if ";" in line)
     return WordList.from_text(tsv)

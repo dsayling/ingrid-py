@@ -4,10 +4,8 @@ import threading
 import time
 
 import pytest
-
-from ingrid_py import FillResult, GridConfig, WordList
-
 from conftest import GRID_3X3
+from ingrid_py import FillResult, GridConfig, WordList
 
 
 class TestFindFill:

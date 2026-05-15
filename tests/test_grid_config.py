@@ -1,10 +1,8 @@
 """Tests for the GridConfig class — construction, validation, and mutable settings."""
 
 import pytest
-
-from ingrid_py import GridConfig
-
 from conftest import GRID_3X3
+from ingrid_py import GridConfig
 
 
 class TestGridConfig:

@@ -1,25 +1,32 @@
-[build-system]
-requires = ["maturin>=1.13,<2.0"]
-build-backend = "maturin"
-
 [project]
 name = "ingrid-py"
 requires-python = ">=3.11"
 classifiers = [
-    "Programming Language :: Rust",
-    "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Programming Language :: Rust",
 ]
 dynamic = ["version"]
 
-[tool.maturin]
-# Python source lives in python/, the .so goes inside the ingrid_py package.
-python-source = "python"
-module-name = "ingrid_py.ingrid_py"
-exclude = ["tests/*", "tests"]
-
 [dependency-groups]
 dev = [
-    "maturin>=1.13.3",
-    "pytest>=9.0.3",
+  "maturin>=1.13.3",
+  "pytest>=9.0.3",
+  "ruff>=0.15.13",
 ]
+
+[build-system]
+requires = ["maturin>=1.13,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+exclude = ["tests/*", "tests"]
+module-name = "ingrid_py.ingrid_py"
+# Python source lives in python/, the .so goes inside the ingrid_py package.
+python-source = "python"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

@@ -1,9 +1,7 @@
 """Tests for the high-level fill() convenience function."""
 
-
-from ingrid_py import fill
-
 from conftest import GRID_3X3
+from ingrid_py import fill
 
 
 class TestFillHelper:

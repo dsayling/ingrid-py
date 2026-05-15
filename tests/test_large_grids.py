@@ -5,10 +5,8 @@ Grid templates mirror the ones used in ingrid_core's own Rust test suite
 """
 
 import pytest
-
-from ingrid_py import FillResult, GridConfig
-
 from conftest import STWL_PATH
+from ingrid_py import FillResult, GridConfig
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -135,9 +133,7 @@ class TestFill15x15Themed:
     def test_slot_options_non_empty(self, stwl_word_list):
         config = GridConfig(THEMED_15X15, stwl_word_list, min_score=MIN_SCORE)
         options = config.slot_options()
-        assert all(len(slot) > 0 for slot in options), (
-            "Every slot should have candidates"
-        )
+        assert all(len(slot) > 0 for slot in options), "Every slot should have candidates"
 
     def test_statistics_populated(self, stwl_word_list):
         config = GridConfig(THEMED_15X15, stwl_word_list, min_score=MIN_SCORE)

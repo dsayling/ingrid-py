@@ -1,8 +1,6 @@
 """Tests for Statistics and FillResult — fields, repr, and timing data."""
 
-
 from ingrid_py import Statistics
-
 
 
 class TestStatistics:

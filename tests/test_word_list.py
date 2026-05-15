@@ -1,9 +1,7 @@
 """Tests for the WordList class."""
 
-
-from ingrid_py import WordList
-
 from conftest import WORDS_3
+from ingrid_py import WordList
 
 
 class TestWordList:
