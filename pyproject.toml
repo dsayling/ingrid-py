@@ -16,8 +16,10 @@ dynamic = ["version"]
 # Python source lives in python/, the .so goes inside the ingrid_py package.
 python-source = "python"
 module-name = "ingrid_py.ingrid_py"
+exclude = ["tests/*", "tests"]
 
 [dependency-groups]
 dev = [
+    "maturin>=1.13.3",
     "pytest>=9.0.3",
 ]

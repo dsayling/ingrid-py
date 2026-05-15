@@ -27,6 +27,8 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - name: Install uv
         uses: astral-sh/setup-uv@v7
+      - name: Create virtualenv
+        run: uv venv
       - name: Build and install (dev)
         uses: PyO3/maturin-action@v1
         with:
