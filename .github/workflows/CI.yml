@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.x"
+          python-version: "3.13"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Build wheels
@@ -75,7 +75,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.x"
+          python-version: "3.13"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Build wheels
@@ -140,7 +140,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.x"
+          python-version: "3.13"
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
