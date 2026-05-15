@@ -311,7 +311,7 @@ dependencies = [
 
 [[package]]
 name = "ingrid-py"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "ingrid_core",
  "pyo3",
@@ -320,7 +320,7 @@ dependencies = [
 [[package]]
 name = "ingrid_core"
 version = "1.3.1"
-source = "git+https://github.com/dsayling/ingrid_core#582cd714cbc7b2d9289d4579fa8c88ae14d12300"
+source = "git+https://github.com/rf-/ingrid_core#582cd714cbc7b2d9289d4579fa8c88ae14d12300"
 dependencies = [
  "clap",
  "either",
